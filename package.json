@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "handle actions without using switch statements",
   "main": "./lib/index.js",
+  "types": "./index.d.ts",
   "scripts": {
     "start": "webpack-dev-server ./test/index.js --mode development --open",
     "build": "babel src --out-dir lib",
