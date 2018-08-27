@@ -1,10 +1,17 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import React from 'react';
+import * as React from 'react';
 import * as Actions from '../actions';
-import Sample from '../components/sample';
+import * as Sample from '../components/sample';
 
-class App extends React.Component {
+interface Prop {
+  count: Number
+}
+
+class App extends React.Component<Prop> {
+  constructor(props) {
+    super(props);
+  }
   render() {
     const props = this.props;
     return (<div>

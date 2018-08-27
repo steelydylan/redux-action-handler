@@ -1,6 +1,11 @@
-import React, { Component, PropTypes } from 'react'
+import * as React from 'react'
 
-export default class Sample extends React.Component {
+interface Props {
+  increment: () => {},
+  decrement: () => {}
+}
+
+export default class Sample<Props> extends React.Component {
   render() {
     return (<div>
       <button onClick={() => this.props.increment()}>増加</button>
