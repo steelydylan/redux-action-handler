@@ -1,19 +1,30 @@
-export default class ActionHandler {
+type Reducer<State> = (state: State, payload: {}) => State;
 
-  constructor(initialState) {
+interface Action<State> {
+  type: String 
+  reducer: Reducer<State>;
+}
+
+export default class ActionHandler<State> {
+
+  private initialState: State
+
+  private actions: Array<Action<State>>
+
+  constructor(initialState: State) {
     this.initialState = initialState;
     this.actions = [];
   }
 
-  addCase(type, reducer) {
+  public addCase(type: String, reducer: Reducer<State>) {
     this.actions = [...this.actions, {
       type, reducer
     }];
   }
 
-  create() {
+  public create() {
     const { initialState, actions } = this;
-    return (state = initialState, action) => {
+    return (state: State = initialState, action : Action<State>) : State => {
       const { type } = action;
       const find = actions.find((item) => {
         if (item.type === type) {
