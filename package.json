@@ -1,13 +1,13 @@
 {
   "name": "redux-action-handler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "handle actions without using switch statements",
   "main": "./lib/index.js",
   "types": "./index.d.ts",
   "scripts": {
     "start": "webpack-dev-server ./test/index.tsx --mode development --open",
     "build": "babel src --out-dir lib",
-    "deploy": "np --no-cleanup"  
+    "deploy": "np --no-cleanup"
   },
   "author": "steelydylan",
   "license": "MIT",
