@@ -2,10 +2,12 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as React from 'react';
 import * as Actions from '../actions';
-import * as Sample from '../components/sample';
+import Sample from '../components/sample';
 
 interface Prop {
-  count: Number
+  count: Number,
+  increment(),
+  decrement()
 }
 
 class App extends React.Component<Prop> {
