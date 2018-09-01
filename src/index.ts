@@ -1,9 +1,13 @@
-type Reducer<State> = (state: State, payload: {}) => State;
+interface Payload {
+  [x: string]: any 
+}
 
 interface Action<State> {
   type: string 
   reducer: Reducer<State>;
 }
+
+type Reducer<State> = (state: State, payload: Payload) => State;
 
 export default class ActionHandler<State> {
 

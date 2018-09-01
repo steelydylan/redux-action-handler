@@ -15,8 +15,8 @@ handler.addCase(types.DECREMENT, (state, action) => {
   return Object.assign({}, state, { count: state.count - 1 });
 });
 
-// handler.addCase(types.RENAME, (state, action) => {
-//   return Object.assign({}, state, { rename: action.rename });
-// });
+handler.addCase(types.RENAME, (state, action) => {
+  return Object.assign({}, state, { rename: action.rename });
+});
 
 export default handler.create();
