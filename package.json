@@ -1,6 +1,6 @@
 {
   "name": "redux-action-handler",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "handle actions without using switch statements",
   "main": "./lib/index.js",
   "types": "./index.d.ts",
