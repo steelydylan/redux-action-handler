@@ -1,7 +1,7 @@
 type Reducer<State> = (state: State, payload: {}) => State;
 
 interface Action<State> {
-  type: String 
+  type: string 
   reducer: Reducer<State>;
 }
 
@@ -16,7 +16,7 @@ export default class ActionHandler<State> {
     this.actions = [];
   }
 
-  public addCase(type: String, reducer: Reducer<State>) {
+  public addCase(type: string, reducer: Reducer<State>) {
     this.actions = [...this.actions, {
       type, reducer
     }];
